@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Horarios de Docentes</title>
+  <!-- Favicon -->
+<link rel="icon" href="img/logo.png" type="image/png" sizes="32x32">
+<link rel="icon" href="img/logo.png" type="image/png" sizes="48x48">
+<link rel="apple-touch-icon" href="img/logo.png">
+<link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+  <style>
+
+    :root { --bg:#ffffff; --card:#00d5ff; --text:#1f2937; --link:#4a6cf7; --linkh:#1e40af; }
+    body { font-family: Arial, sans-serif; background: var(--bg); margin:0; padding:24px; color:var(--text); }
+    .wrap { max-width: 900px; margin: 0 auto; }
+    h1 { text-align:center; margin: 0 0 16px; }
+    .hint { text-align:center; margin-bottom:16px; font-size:14px; opacity:.8; }
+    .search { display:block; width:100%; padding:12px 14px; border:1px solid #d1d5db; border-radius:10px; background:#fff; font-size:16px; margin: 0 auto 18px; }
+    ul { list-style:none; padding:0; margin:0; display:grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap:12px; }
+    li { margin:0; }
+    a {
+      display:block; text-decoration:none; background: var(--card); border:1px solid #e5e7eb;
+      border-radius:10px; padding:12px 14px; transition:.2s; font-weight:600; color:var(--text);
+    }
+    a:hover { border-color:#c7d2fe; box-shadow:0 6px 20px rgba(0,0,0,.06); }
+    .num { font-weight:700; margin-right:8px; opacity:.55; }
+ /* Header */
+    header img {
+        position: absolute;
+        left: 10px;
+        top: 10px;
+        max-height: 90px;
+    }
+    header {
+        background-color: rgba(0, 0, 0, 0.6);
+        padding: 10px 10px 10px 130px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+        position: relative;
+    }
+    h1, h2 {
+        margin: 5px 0;
+    }
+
+    /* FOOTER */
+footer {
+    background: #023e8a;
+    color: white;
+    text-align: center;
+    padding: 15px;
+}
+
+.btn {
+    display: inline-block;
+    background: #222;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    margin-top: 10px;
+    text-decoration: none;
+}
+
+.cta {
+    text-align: center;
+    padding: 30px;
+    background: #3af2ff;
+    color: rgb(0, 0, 0);
+}
+.estado-actual {
+    background: #90e0ef;
+    color: #000000;
+    text-align: center;
+    font-weight: bold;
+    padding: 15px;
+    border-bottom: 3px solid #0077b6;
+    font-size: 1.1em;
+}
+header {
+    animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+.redes-sociales {
+    margin-top: 15px;
+}
+
+.redes-sociales a {
+    display: inline-block;
+    margin: 0 8px;
+    transition: transform 0.3s ease;
+}
+
+.redes-sociales a img {
+    width: 32px;
+    height: 32px;
+}
+
+.redes-sociales a:hover {
+    transform: scale(1.2);
+}
+.redes-sociales {
+  margin-top: 15px;
+}
+
+.redes-sociales a {
+  display: inline-block;
+  margin: 0 8px;
+  transition: transform 0.3s ease;
+}
+
+.redes-sociales a img {
+  width: 32px;
+  height: 32px;
+}
+
+.redes-sociales a:hover {
+  transform: scale(1.2);
+}
+.icon-credly {
+    width: 60px;   /* ancho mayor para que sea rectangular */
+    height: 30px;  /* altura más pequeña */
+    object-fit: contain; /* mantiene la proporción original */
+    border-radius: 5px;  /* bordes suavizados */
+    background-color: rgb(20, 36, 42); /* opcional: para que resalte */
+    padding: 3px; /* opcional: espacio interno */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.15); /* opcional: sombra ligera */
+}
+.social-icons {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.social-icons img {
+    object-fit: contain;
+    border-radius: 5px;
+    background-color: rgb(255, 255, 255); /* para que resalten */
+    padding: 3px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.15);
+    transition: transform 0.2s ease;
+}
+
+.social-icons img:hover {
+    transform: scale(1.1);
+}
+
+/* Para íconos cuadrados (WhatsApp, Instagram, TikTok, Facebook) */
+.icon-square {
+    width: 35px;
+    height: 35px;
+}
+
+/* Para íconos rectangulares (YouTube, Credly) */
+.icon-rect {
+    width: 60px;
+    height: 30px;
+}
+footer {
+    background: #575656;
+    color: #00ff1e;
+    padding: 30px 20px;
+    margin-top: 50px;
+    text-align: center;
+}
+
+.footer-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+.footer-info p, 
+.footer-info a {
+    margin: 5px 0;
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.footer-social {
+    display: flex;
+    gap: 15px;
+    margin-top: 10px;
+}
+
+.footer-copy {
+    margin-top: 20px;
+    font-size: 14px;
+    color: #000000;
+}
+.logo-fijo {
+    position: fixed;   /* Siempre visible en pantalla */
+    top: 20px;         /* Más abajo (ajusta el número a tu gusto) */
+    left: 35px;        /* Esquina izquierda */
+    width: 80px;       /* Tamaño */
+    height: auto;
+    z-index: 1000;     /* Encima de todo */
+    border-radius: 10px; /* Opcional: bordes redondeados */
+}
+/* ========================= */
+/* RESPONSIVE DESIGN */
+/* ========================= */
+
+/* Tablets y pantallas medianas */
+@media (max-width: 768px) {
+    .nav-container {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    header img.perfil-img {
+        width: 120px;
+        height: 120px;
+    }
+
+    h1 {
+        font-size: 1.5em;
+    }
+
+    h2 {
+        font-size: 1.2em;
+    }
+}
+
+/* Móviles pequeños */
+@media (max-width: 480px) {
+    header {
+        padding: 30px 15px;
+    }
+
+    header img.perfil-img {
+        width: 90px;
+        height: 90px;
+    }
+
+    .card img {
+        max-width: 100%; /* ocupa todo el ancho disponible */
+    }
+
+    nav ul {
+        gap: 5px;
+    }
+
+    h1 {
+        font-size: 1.2em;
+    }
+
+    h2 {
+        font-size: 1em;
+    }
+
+    .estado-actual {
+        font-size: 0.9em;
+        padding: 10px;
+    }
+}
+  </style>
+</head>
+<body>
+    <header>
+    <img src="img/logo.png" alt="Logo José Gálvez">
+    <div>
+        <h1>Institución Educativa Integrada José Gálvez</h1>
+        <h1>Horarios de Docentes - Secundaria</h1>
+    </div>
+</header>
+  <div class="wrap">
+    
+    <p class="hint">Haz clic en un docente para abrir su horario.</p>
+    <input id="q" class="search" type="search" placeholder="Buscar docente..." oninput="filtrar()" />
+    <ul id="lista">
+      <li><a href="horario_de_la_cruz_felipes_jackeline_ruth.html"><span class="num">1</span>DE LA CRUZ FELIPES Jackeline Ruth</a></li>
+      <li><a href="horario_villar_quinonez_jimmy.html"><span class="num">2</span>VILLAR QUIÑONEZ Jimmy</a></li>
+      <li><a href="horario_garcia_navarro_rosario.html"><span class="num">3</span>GARCÍA NAVARRO Rosario</a></li>
+      <li><a href="horario_nonalaya_mandojano_mencio_elmer.html"><span class="num">4</span>NONALAYA MANDUJANO Mencio Elmer</a></li>
+      <li><a href="horario_munoz_romero_ernesto_basilio.html"><span class="num">5</span>MUÑOZ ROMERO Ernesto Basilio</a></li>
+      <li><a href="horario_paucar_santiago_teofilo.html"><span class="num">6</span>PAUCAR SANTIAGO Teofilo</a></li>
+      <li><a href="horario_conde_nunez_baltazar.html"><span class="num">7</span>CONDE NUÑEZ Baltazar</a></li>
+      <li><a href="horario_parra_rojas_rosario_estephany.html"><span class="num">8</span>PARRA ROJAS Rosario Estephany</a></li>
+      <li><a href="horario_roger_pariona.html"><span class="num">9</span>PARIONA MOLINA ROGER</a></li>
+      <li><a href="horario_fabian_cabrena_nestor_aquilio.html"><span class="num">10</span>FABIAN CABRERA Nestor Aquilio</a></li>
+      <li><a href="horario_raymundo_olortegui_celia.html"><span class="num">11</span>RAYMUNDO OLORTEGUI Celia</a></li>
+      <li><a href="horario_zevallos_cordova_gilda_mercedes.html"><span class="num">12</span>ZEVALLOS CÓRDOVA Gilda Mercedes</a></li>
+      <li><a href="horario_mendoza_chamorro_elver.html"><span class="num">13</span>MENDOZA CHAMORRO Elver</a></li>
+      <li><a href="horario_huacho_ayala_francisco.html"><span class="num">14</span>HUACHO AYALA Francisco</a></li>
+      <li><a href="horario_zurita_avellaneda_lilian_luz.html"><span class="num">15</span>ZURITA AVELLANEDA Lilian Luz</a></li>
+      <li><a href="horario_sarmiento_parraga_judit_sarai.html"><span class="num">16</span>SARMIENTO PÁRRAGA Judit Sarai</a></li>
+      <li><a href="horario_puitalla_palomino_dina.html"><span class="num">17</span>PUITALLA PALOMINO Dina</a></li>
+      <li><a href="horario_aquino_espejo_dina.html"><span class="num">18</span>AQUINO ESPEJO VIRGINIA</a></li>
+      <li><a href="horario_juno_candiotti_rosmery.html"><span class="num">19</span>JUÑO CANDIOTI ROSMERY</a></li>
+      <li><a href="horario_casas_mucha_yony.html"><span class="num">20</span>CASAS MUCHA YONY</a></li>
+      <li><a href="horario_arnesquito_sedano_eliseo.html"><span class="num">21</span>ARNESQUITO SEDANO ELISEO</a></li>
+      <li><a href="horario_huaraca_alhuay_naida.html"><span class="num">22</span>HUARACA ALHUAY NAIDA</a></li>
+      <li><a href="horario_rosado_fabian_manuel.html"><span class="num">23</span>ROSADO FABIAN MANUEL</a></li>
+      <li><a href="horario_ochochoque_hernandez_julio.html"><span class="num">24</span>OCHOCHOQUE HERNANDEZ JULIO</a></li>
+      <li><a href="horario_carhuas_quispe_wilkinson.html"><span class="num">25</span>CARHUAS QUISPE WILKENSON</a></li>
+      <li><a href="horario_sanabria_ricse_david.html"><span class="num">26</span>SANABRIA RICSE DAVID</a></li>
+      <li><a href="horario_jauregui_zarate_elfer_teo.html"><span class="num">27</span>JAUREGUI ZARATE ELFER TEO</a></li>
+      <li><a href="horario_baldeon_melchor_abner.html"><span class="num">28</span>BALDEON MELCHOR ABNER</a></li>
+      <li><a href="horario_berta_suarez_nuevo_docente.html"><span class="num">29</span>BERTHA ALICIA SUAREZ MERCADO</a></li>
+      <li><a href="horario_sanchez_martines_eliza.html"><span class="num">30</span>SANCHEZ MARTINES ELIZA</a></li>
+      <li><a href="horario_apolinario_prado_jessica.html"><span class="num">31</span>APOLINARIO PRADO JESSICA</a></li>
+      <li><a href="horario_rojas_zabaleta_johana.html"><span class="num">32</span>ROJAS ZABALETA JOHANA</a></li>
+      <li><a href="horario_huaman_fuentes.html"><span class="num">33</span>HUAMAN FUENTES</a></li>
+    </ul>
+  </div>
+
+<!-- ===== FOOTER ===== -->
+<footer>
+    <div class="container footer-container">
+        <div class="footer-info">
+            <p><strong>Dirección:</strong> Jr. Francisco Bolognesi 4 cuadra N°436</p>
+            <p><strong>Teléfono:</strong> <a href="tel:+51964073785">964 073 785</a></p>
+            <p><strong>Email:</strong> <a href="mailto:leonmaytan@gmail.com">leonmaytan@gmail.com</a></p>
+        </div>
+
+        <div class="footer-social">
+            <a href="https://wa.me/qr/A7IPPXNTP7RNE1" target="_blank" title="WhatsApp">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" class="icon-square">
+            </a>
+            <a href="https://www.facebook.com/share/1HtpuXBqeD/" target="_blank" title="Facebook">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/4/44/Facebook_Logo.png" alt="Facebook" class="icon-square">
+            </a>
+            <a href="https://www.instagram.com/leonmaytan?igsh=MWNnNWpudHZoNjk5dg==" target="_blank" title="Instagram">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/e/e7/Instagram_logo_2016.svg" alt="Instagram" class="icon-square">
+            </a>
+            <a href="https://www.tiktok.com/@leonardomaytan?_t=ZS-8yu7vAObmxc&_r=1" target="_blank" title="TikTok">
+                <img src="https://upload.wikimedia.org/wikipedia/en/a/a9/TikTok_logo.svg" alt="TikTok" class="icon-square">
+            </a>
+            <a href="https://youtube.com/@leonmaytan?si=W4CI23BQK57M3DOa" target="_blank" title="YouTube">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/b/b8/YouTube_Logo_2017.svg" alt="YouTube" class="icon-rect">
+            </a>
+            <a href="https://www.credly.com/users/leonardo-david-maytan-quispe/badges#credly" target="_blank" title="Credly">
+                <img src="img/credly.png" alt="Credly" class="icon-rect">
+            </a>
+        </div>
+    </div>
+
+    <p class="footer-copy">&copy; 2025 Leonardo David Maytan Quispe - Ingeniero de Sistemas</p>
+</footer>
+
+  <script>
+    function filtrar(){
+      const q = document.getElementById('q').value.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '');
+      for (const li of document.querySelectorAll('#lista li')) {
+        const txt = li.textContent.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '');
+        li.style.display = txt.includes(q) ? '' : 'none';
+      }
+    }
+  </script>
+</body>
+</html>
