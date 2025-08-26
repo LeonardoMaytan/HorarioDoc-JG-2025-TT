@@ -9,277 +9,239 @@
 <link rel="icon" href="img/logo.png" type="image/png" sizes="48x48">
 <link rel="apple-touch-icon" href="img/logo.png">
 <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
-  <style>
+<style>
+    :root {
+      --bg: #ffffff;
+      --card: #00d5ff;
+      --text: #1f2937;
+      --link: #4a6cf7;
+      --linkh: #1e40af;
+    }
 
-    :root { --bg:#ffffff; --card:#00d5ff; --text:#1f2937; --link:#4a6cf7; --linkh:#1e40af; }
-    body { font-family: Arial, sans-serif; background: var(--bg); margin:0; padding:24px; color:var(--text); }
-    .wrap { max-width: 900px; margin: 0 auto; }
-    h1 { text-align:center; margin: 0 0 16px; }
-    .hint { text-align:center; margin-bottom:16px; font-size:14px; opacity:.8; }
-    .search { display:block; width:100%; padding:12px 14px; border:1px solid #d1d5db; border-radius:10px; background:#fff; font-size:16px; margin: 0 auto 18px; }
-    ul { list-style:none; padding:0; margin:0; display:grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap:12px; }
-    li { margin:0; }
-    a {
-      display:block; text-decoration:none; background: var(--card); border:1px solid #e5e7eb;
-      border-radius:10px; padding:12px 14px; transition:.2s; font-weight:600; color:var(--text);
+    body {
+      font-family: Arial, sans-serif;
+      background: var(--bg);
+      margin: 0;
+      padding: 24px;
+      color: var(--text);
     }
-    a:hover { border-color:#c7d2fe; box-shadow:0 6px 20px rgba(0,0,0,.06); }
-    .num { font-weight:700; margin-right:8px; opacity:.55; }
- /* Header */
-    header img {
-        position: absolute;
-        left: 10px;
-        top: 10px;
-        max-height: 90px;
+
+    .wrap {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 0 16px;
     }
-    header {
-        background-color: rgba(0, 0, 0, 0.6);
-        padding: 10px 10px 10px 130px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        flex-wrap: wrap;
-        position: relative;
-    }
+
     h1, h2 {
-        margin: 5px 0;
+      margin: 5px 0;
+    }
+
+    .titulo-header {
+      text-align: center;
+    }
+
+    .hint {
+      text-align: center;
+      margin-bottom: 16px;
+      font-size: 14px;
+      opacity: .8;
+    }
+
+    .search {
+      display: block;
+      width: 100%;
+      padding: 12px 14px;
+      border: 1px solid #d1d5db;
+      border-radius: 10px;
+      background: #fff;
+      font-size: 16px;
+      margin: 0 auto 18px;
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 12px;
+    }
+
+    li {
+      margin: 0;
+    }
+
+    a {
+      display: block;
+      text-decoration: none;
+      background: var(--card);
+      border: 1px solid #e5e7eb;
+      border-radius: 10px;
+      padding: 12px 14px;
+      transition: .2s;
+      font-weight: 600;
+      color: var(--text);
+    }
+
+    a:hover {
+      border-color: #c7d2fe;
+      box-shadow: 0 6px 20px rgba(0,0,0,.06);
+    }
+
+    .num {
+      font-weight: 700;
+      margin-right: 8px;
+      opacity: .55;
+    }
+
+    /* Header */
+    header {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+      background-color: rgba(0, 0, 0, 0.6);
+      padding: 15px;
+      color: white;
+      animation: fadeIn 1s ease-in-out;
+    }
+
+    header img {
+      max-height: 80px;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(-10px); }
+      to { opacity: 1; transform: translateY(0); }
     }
 
     /* FOOTER */
-footer {
-    background: #023e8a;
-    color: white;
-    text-align: center;
-    padding: 15px;
-}
-
-.btn {
-    display: inline-block;
-    background: #222;
-    color: white;
-    padding: 10px 20px;
-    border-radius: 5px;
-    margin-top: 10px;
-    text-decoration: none;
-}
-
-.cta {
-    text-align: center;
-    padding: 30px;
-    background: #3af2ff;
-    color: rgb(0, 0, 0);
-}
-.estado-actual {
-    background: #90e0ef;
-    color: #000000;
-    text-align: center;
-    font-weight: bold;
-    padding: 15px;
-    border-bottom: 3px solid #0077b6;
-    font-size: 1.1em;
-}
-header {
-    animation: fadeIn 1s ease-in-out;
-}
-
-@keyframes fadeIn {
-    from { opacity: 0; transform: translateY(-10px); }
-    to { opacity: 1; transform: translateY(0); }
-}
-.redes-sociales {
-    margin-top: 15px;
-}
-
-.redes-sociales a {
-    display: inline-block;
-    margin: 0 8px;
-    transition: transform 0.3s ease;
-}
-
-.redes-sociales a img {
-    width: 32px;
-    height: 32px;
-}
-
-.redes-sociales a:hover {
-    transform: scale(1.2);
-}
-.redes-sociales {
-  margin-top: 15px;
-}
-
-.redes-sociales a {
-  display: inline-block;
-  margin: 0 8px;
-  transition: transform 0.3s ease;
-}
-
-.redes-sociales a img {
-  width: 32px;
-  height: 32px;
-}
-
-.redes-sociales a:hover {
-  transform: scale(1.2);
-}
-.icon-credly {
-    width: 60px;   /* ancho mayor para que sea rectangular */
-    height: 30px;  /* altura más pequeña */
-    object-fit: contain; /* mantiene la proporción original */
-    border-radius: 5px;  /* bordes suavizados */
-    background-color: rgb(20, 36, 42); /* opcional: para que resalte */
-    padding: 3px; /* opcional: espacio interno */
-    box-shadow: 0 2px 5px rgba(0,0,0,0.15); /* opcional: sombra ligera */
-}
-.social-icons {
-    display: flex;
-    gap: 10px;
-    align-items: center;
-}
-
-.social-icons img {
-    object-fit: contain;
-    border-radius: 5px;
-    background-color: rgb(255, 255, 255); /* para que resalten */
-    padding: 3px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.15);
-    transition: transform 0.2s ease;
-}
-
-.social-icons img:hover {
-    transform: scale(1.1);
-}
-
-/* Para íconos cuadrados (WhatsApp, Instagram, TikTok, Facebook) */
-.icon-square {
-    width: 35px;
-    height: 35px;
-}
-
-/* Para íconos rectangulares (YouTube, Credly) */
-.icon-rect {
-    width: 60px;
-    height: 30px;
-}
-footer {
-    background: #575656;
-    color: #00ff1e;
-    padding: 30px 20px;
-    margin-top: 50px;
-    text-align: center;
-}
-
-.footer-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 15px;
-}
-
-.footer-info p, 
-.footer-info a {
-    margin: 5px 0;
-    color: #ffffff;
-    text-decoration: none;
-}
-
-.footer-social {
-    display: flex;
-    gap: 15px;
-    margin-top: 10px;
-}
-
-.footer-copy {
-    margin-top: 20px;
-    font-size: 14px;
-    color: #000000;
-}
-.logo-fijo {
-    position: fixed;   /* Siempre visible en pantalla */
-    top: 20px;         /* Más abajo (ajusta el número a tu gusto) */
-    left: 35px;        /* Esquina izquierda */
-    width: 80px;       /* Tamaño */
-    height: auto;
-    z-index: 1000;     /* Encima de todo */
-    border-radius: 10px; /* Opcional: bordes redondeados */
-}
-/* ========================= */
-/* RESPONSIVE DESIGN */
-/* ========================= */
-
-/* Tablets y pantallas medianas */
-@media (max-width: 768px) {
-    .nav-container {
-        flex-direction: column;
-        gap: 10px;
+    footer {
+      background: #575656;
+      color: #00ff1e;
+      padding: 30px 20px;
+      margin-top: 50px;
+      text-align: center;
     }
 
-    nav ul {
-        flex-direction: column;
-        align-items: center;
-        gap: 10px;
+    .footer-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 15px;
     }
 
-    header img.perfil-img {
-        width: 120px;
-        height: 120px;
+    .footer-info p, 
+    .footer-info a {
+      margin: 5px 0;
+      color: #ffffff;
+      text-decoration: none;
     }
 
-    h1 {
+    .footer-social {
+      display: flex;
+      gap: 15px;
+      margin-top: 10px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .footer-copy {
+      margin-top: 20px;
+      font-size: 14px;
+      color: #000000;
+    }
+
+    /* Social Icons */
+    .icon-square {
+      width: 35px;
+      height: 35px;
+    }
+
+    .icon-rect {
+      width: 60px;
+      height: 30px;
+    }
+
+    .footer-social img {
+      object-fit: contain;
+      border-radius: 5px;
+      background-color: #fff;
+      padding: 3px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.15);
+      transition: transform 0.2s ease;
+    }
+
+    .footer-social img:hover {
+      transform: scale(1.1);
+    }
+
+    /* Responsive Design */
+
+    @media (max-width: 768px) {
+      h1 {
         font-size: 1.5em;
-    }
+      }
 
-    h2 {
+      h2 {
         font-size: 1.2em;
-    }
-}
-
-/* Móviles pequeños */
-@media (max-width: 480px) {
-    header {
-        padding: 30px 15px;
+      }
     }
 
-    header img.perfil-img {
-        width: 90px;
-        height: 90px;
-    }
+    @media (max-width: 480px) {
+      header {
+        flex-direction: column;
+        text-align: center;
+      }
 
-    .card img {
-        max-width: 100%; /* ocupa todo el ancho disponible */
-    }
+      .titulo-header h1 {
+        font-size: 1.3em;
+      }
 
-    nav ul {
-        gap: 5px;
-    }
+      .titulo-header h2 {
+        font-size: 1.1em;
+      }
 
-    h1 {
-        font-size: 1.2em;
-    }
+      ul {
+        grid-template-columns: 1fr;
+      }
 
-    h2 {
-        font-size: 1em;
-    }
+      .search {
+        font-size: 18px;
+        padding: 14px;
+      }
 
-    .estado-actual {
-        font-size: 0.9em;
-        padding: 10px;
+      a {
+        font-size: 16px;
+        padding: 16px;
+      }
+
+      .footer-social img {
+        width: 28px;
+        height: 28px;
+      }
+
+      .footer-copy {
+        font-size: 12px;
+      }
     }
-}
   </style>
 </head>
 <body>
-    <header>
+     <!-- HEADER -->
+  <header>
     <img src="img/logo.png" alt="Logo José Gálvez">
-    <div>
-        <h1>Institución Educativa Integrada José Gálvez</h1>
-        <h1>Horarios de Docentes - Secundaria</h1>
+    <div class="titulo-header">
+      <h1>Institución Educativa Integrada José Gálvez</h1>
+      <h2>Horarios de Docentes - Secundaria</h2>
     </div>
-</header>
+  </header>
+
   <div class="wrap">
-    
     <p class="hint">Haz clic en un docente para abrir su horario.</p>
     <input id="q" class="search" type="search" placeholder="Buscar docente..." oninput="filtrar()" />
+
     <ul id="lista">
       <li><a href="horario_de_la_cruz_felipes_jackeline_ruth.html"><span class="num">1</span>DE LA CRUZ FELIPES Jackeline Ruth</a></li>
       <li><a href="horario_villar_quinonez_jimmy.html"><span class="num">2</span>VILLAR QUIÑONEZ Jimmy</a></li>
@@ -362,3 +324,4 @@ footer {
   </script>
 </body>
 </html>
+
