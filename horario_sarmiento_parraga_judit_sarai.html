@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Horario - Profesora SARMIENTO PÁRRAGA Judit</title>
+  <style>
+    :root{
+      --bg:#f7f9fc;
+      --card:#ffffff;
+      --head:#2c3e50;
+      --accent:#2980b9;
+      --refr-bg:#fff3bf;
+      --rec-bg:#d6f5ff;
+    }
+    body{
+      margin:0;
+      font-family: Arial, Helvetica, sans-serif;
+      background:var(--bg);
+      color:#222;
+      padding:18px;
+    }
+    h1{ text-align:center; color:var(--head); margin:6px 0 14px; }
+    .table-wrap{ max-width:980px; margin:0 auto; background:var(--card); padding:14px; border-radius:8px; box-shadow:0 6px 18px rgba(0,0,0,0.06); }
+    table{ width:100%; border-collapse:collapse; }
+    th, td{ border:1px solid #dbe6ef; padding:10px 8px; text-align:center; font-size:14px; vertical-align:middle; }
+    th{ background:var(--accent); color:#fff; font-weight:600; }
+    .hora { font-weight:700; background:#eef6fb; }
+    .refrigerio{ background:var(--refr-bg); font-weight:700; text-align:center; }
+    .receso{ background:var(--rec-bg); font-weight:700; text-align:center; }
+    tr:nth-child(even) td { background:#fcfeff; }
+    .btn-row{ text-align:center; margin-top:14px; }
+    .btn{ display:inline-block; padding:10px 18px; background:var(--accent); color:#fff; text-decoration:none; border-radius:6px; font-weight:600; }
+    .btn:hover{ background:#1f6fb0; }
+    @media (max-width:720px){
+      th, td{ font-size:13px; padding:8px; }
+      .hora{ font-size:13px; }
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Horario - Profesora SARMIENTO PÁRRAGA Judit</h1>
+
+  <div class="table-wrap">
+    <table>
+      <thead>
+        <tr>
+          <th>Hora</th>
+          <th>Lunes</th>
+          <th>Martes</th>
+          <th>Miércoles</th>
+          <th>Jueves</th>
+          <th>Viernes</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="hora">1<br><small>12:00 – 12:40</small></td>
+          <td></td>
+          <td>Ing. 1ro C</td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+
+        <tr>
+          <td class="hora">2<br><small>12:40 – 13:20</small></td>
+          <td></td>
+          <td>Ing. 1ro C</td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+
+        <tr>
+          <td class="hora">3<br><small>13:20 – 14:00</small></td>
+          <td></td>
+          <td>Ing. 1ro C</td>
+          <td></td>
+          <td></td>
+          <td>Ing. 2do A</td>
+        </tr>
+
+        <!-- Refrigerio -->
+        <tr>
+          <td colspan="6" class="refrigerio">Refrigerio — 14:00 – 14:30</td>
+        </tr>
+
+        <tr>
+          <td class="hora">4<br><small>14:30 – 15:10</small></td>
+          <td>Ing. 1ro D</td>
+          <td>Ing. 1ro B</td>
+          <td></td>
+          <td>Ing. 1ro B</td>
+          <td>Ing. 2do A</td>
+        </tr>
+
+        <tr>
+          <td class="hora">5<br><small>15:10 – 15:50</small></td>
+          <td>Ing. 1ro D</td>
+          <td>Ing. 1ro B</td>
+          <td>Colegiada de Letras</td>
+          <td>Ing. 1ro B</td>
+          <td>Ing. 2do A</td>
+        </tr>
+
+        <tr>
+          <td class="hora">6<br><small>15:50 – 16:30</small></td>
+          <td>Ing. 1ro D</td>
+          <td>Ing. 1ro B</td>
+          <td>Colegiada de Letras</td>
+          <td>Ing. 2do A</td>
+          <td></td>
+        </tr>
+
+        <!-- Receso -->
+        <tr>
+          <td colspan="6" class="receso">Receso — 16:30 – 16:40</td>
+        </tr>
+
+        <tr>
+          <td class="hora">7<br><small>16:40 – 17:20</small></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td>Ing. 2do A</td>
+          <td>Ing. 1ro A</td>
+        </tr>
+
+        <tr>
+          <td class="hora">8<br><small>17:20 – 18:00</small></td>
+          <td>Ing. 1ro A</td>
+          <td></td>
+          <td>Ing. 1ro D</td>
+          <td>Ing. 1ro C</td>
+          <td>Ing. 1ro A</td>
+        </tr>
+
+        <tr>
+          <td class="hora">9<br><small>18:00 – 18:40</small></td>
+          <td>Ing. 1ro A</td>
+          <td></td>
+          <td>Ing. 1ro D</td>
+          <td>Ing. 1ro C</td>
+          <td>Ing. 1ro A</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="btn-row">
+      <a class="btn" href="index.html">⬅ Volver al Índice</a>
+    </div>
+  </div>
+
+</body>
+</html>

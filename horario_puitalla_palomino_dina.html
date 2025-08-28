@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Horario - Prof. Puitalla Palomino Dina</title>
+  <style>
+    :root{
+      --bg:#f5f7fb;
+      --card:#ffffff;
+      --head:#1f2937;
+      --accent:#2563eb;
+      --refr:#fff3bf;
+      --rec:#d1f2ff;
+      --border:#dbe7f5;
+    }
+    body{
+      margin:0;
+      font-family: Inter, Arial, Helvetica, sans-serif;
+      background:var(--bg);
+      color:var(--head);
+      padding:18px;
+    }
+    .wrap{ max-width:1100px; margin:0 auto; }
+    h1{ text-align:center; margin:6px 0 12px; font-size:20px; }
+    .card{ background:var(--card); padding:14px; border-radius:8px; box-shadow:0 8px 24px rgba(16,24,40,0.06); }
+    table{ width:100%; border-collapse:collapse; }
+    th, td{ border:1px solid var(--border); padding:10px 8px; text-align:center; vertical-align:middle; font-size:14px; }
+    th{ background:var(--accent); color:#fff; font-weight:600; }
+    .hora { font-weight:700; background:#f0f7ff; }
+    .refrigerio{ background:var(--refr); font-weight:700; color:#333; }
+    .receso{ background:var(--rec); font-weight:700; color:#333; }
+    tr:nth-child(even) td { background:#fcfeff; }
+    .actions{ display:flex; gap:10px; justify-content:center; margin-top:14px; }
+    .btn {
+      display:inline-block; padding:10px 16px; border-radius:8px; text-decoration:none; color:#fff; font-weight:600;
+    }
+    .btn-back{ background:#374151; }
+    .btn-print{ background:#0ea5a4; }
+    .btn:hover{ transform:translateY(-1px); }
+    @media (max-width:880px){
+      th, td{ font-size:13px; padding:8px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <h1>Horario — Profesora PUITALLA PALOMINO DINA</h1>
+
+    <div class="card">
+      <table>
+        <thead>
+          <tr>
+            <th>Hora</th>
+            <th>Rango</th>
+            <th>Lunes</th>
+            <th>Martes</th>
+            <th>Miércoles</th>
+            <th>Jueves</th>
+            <th>Viernes</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="hora">1</td>
+            <td>12:00 – 12:40</td>
+            <td></td>
+            <td>Com 1ro B</td>
+            <td></td>
+            <td>Com 1ro A</td>
+            <td>Com 1ro C</td>
+          </tr>
+
+          <tr>
+            <td class="hora">2</td>
+            <td>12:40 – 13:20</td>
+            <td></td>
+            <td>Com 1ro B</td>
+            <td></td>
+            <td>Com 1ro A</td>
+            <td>Com 1ro C</td>
+          </tr>
+
+          <tr>
+            <td class="hora">3</td>
+            <td>13:20 – 14:00</td>
+            <td></td>
+            <td>Com 1ro B</td>
+            <td></td>
+            <td>Com 1ro D</td>
+            <td>Com 1ro C</td>
+          </tr>
+
+          <tr class="refrigerio">
+            <td>—</td>
+            <td>14:00 – 14:30</td>
+            <td colspan="5">Refrigerio</td>
+          </tr>
+
+          <tr>
+            <td class="hora">4</td>
+            <td>14:30 – 15:10</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td>Com 1ro D</td>
+            <td></td>
+          </tr>
+
+          <tr>
+            <td class="hora">5</td>
+            <td>15:10 – 15:50</td>
+            <td>Quec 3ro B</td>
+            <td>Com 1ro A</td>
+            <td>Colegiada de Letras</td>
+            <td></td>
+            <td>Com 1ro D</td>
+          </tr>
+
+          <tr>
+            <td class="hora">6</td>
+            <td>15:50 – 16:30</td>
+            <td>Quec 3ro B</td>
+            <td>Com 1ro A</td>
+            <td>Colegiada de Letras</td>
+            <td>Com 1ro B</td>
+            <td>Com 1ro D</td>
+          </tr>
+
+          <tr class="receso">
+            <td>—</td>
+            <td>16:30 – 16:40</td>
+            <td colspan="5">Receso</td>
+          </tr>
+
+          <tr>
+            <td class="hora">7</td>
+            <td>16:40 – 17:20</td>
+            <td>Quec 3ro B</td>
+            <td>Com 1ro A</td>
+            <td>Quec 3ro A</td>
+            <td>Com 1ro B</td>
+            <td>Com 1ro D</td>
+          </tr>
+
+          <tr>
+            <td class="hora">8</td>
+            <td>17:20 – 18:00</td>
+            <td>Com 1ro C</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td>Quec 3ro A</td>
+          </tr>
+
+          <tr>
+            <td class="hora">9</td>
+            <td>18:00 – 18:40</td>
+            <td>Com 1ro C</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td>Quec 3ro A</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div class="actions">
+        <a class="btn btn-back" href="index.html">⬅ Volver al Índice</a>
+       
+      </div>
+    </div>
+  </div>
+</body>
+</html>
