@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
   <meta charset="UTF-8" />
   <title>Horario - Prof. PARIONA MOLINA ROGER</title>
@@ -9,42 +10,51 @@
       background: #f9f9f9;
       margin: 20px;
     }
+
     h2 {
       text-align: center;
       color: #2c3e50;
     }
+
     table {
       width: 100%;
       border-collapse: collapse;
       margin-top: 20px;
       margin-bottom: 20px;
       background: white;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
     }
-    th, td {
+
+    th,
+    td {
       border: 1px solid #ccc;
       padding: 8px;
       text-align: center;
       vertical-align: middle;
       font-size: 14px;
     }
+
     th {
       background-color: #34495e;
       color: white;
     }
+
     .empty {
       background-color: #f0f0f0;
     }
+
     .receso {
       background-color: #ffefd5;
       font-weight: bold;
       color: #d35400;
     }
+
     .refrigerio {
       background-color: #d5f5e3;
       font-weight: bold;
       color: #27ae60;
     }
+
     .btn-back {
       display: block;
       width: 150px;
@@ -58,11 +68,13 @@
       font-weight: bold;
       transition: background-color 0.3s ease;
     }
+
     .btn-back:hover {
       background-color: #1c5980;
     }
   </style>
 </head>
+
 <body>
 
   <h2>Horario - Profesor PARIONA MOLINA ROGER</h2>
@@ -79,25 +91,95 @@
       </tr>
     </thead>
     <tbody>
-      <tr><td>12:00 – 12:40</td><td>Cc.Ss<br>2do D</td><td>Cc.Ss<br>2do C</td><td>Cc.Ss<br>2do C</td><td class="empty"></td><td class="empty"></td></tr>
-      <tr><td>12:40 – 13:20</td><td>Cc.Ss<br>2do D</td><td>Cc.Ss<br>2do C</td><td>Cc.Ss<br>2do C</td><td class="empty"></td><td class="empty"></td></tr>
-      <tr><td>13:20 – 14:00</td><td class="empty"></td><td>DPCC<br>1ro A</td><td>DPCC<br>1ro B</td><td class="empty"></td><td class="empty"></td></tr>
+      <tr>
+        <td>12:00 – 12:40</td>
+        <td>Cc.Ss<br>2do D</td>
+        <td>Cc.Ss<br>2do C</td>
+        <td>Cc.Ss<br>2do C</td>
+        <td class="empty"></td>
+        <td class="empty"></td>
+      </tr>
+      <tr>
+        <td>12:40 – 13:20</td>
+        <td>Cc.Ss<br>2do D</td>
+        <td>Cc.Ss<br>2do C</td>
+        <td>Cc.Ss<br>2do C</td>
+        <td class="empty"></td>
+        <td class="empty"></td>
+      </tr>
+      <tr>
+        <td>13:20 – 14:00</td>
+        <td class="empty"></td>
+        <td>DPCC<br>1ro A</td>
+        <td>DPCC<br>1ro B</td>
+        <td class="empty"></td>
+        <td class="empty"></td>
+      </tr>
 
-      <tr class="refrigerio"><td>14:00 – 14:30</td><td colspan="5">-- Descanso para refrigerio --</td></tr>
+      <tr class="refrigerio">
+        <td>14:00 – 14:30</td>
+        <td colspan="5">-- Descanso para refrigerio --</td>
+      </tr>
 
-      <tr><td>14:30 – 15:10</td><td class="empty"></td><td>DPCC<br>1ro A</td><td>DPCC<br>1ro B</td><td class="empty"></td><td class="empty"></td></tr>
-      <tr><td>15:10 – 15:50</td><td>DPCC<br>1ro A</td><td class="empty"></td><td>Cc.Ss<br>2do D</td><td class="empty"></td><td class="empty"></td></tr>
-      <tr><td>15:50 – 16:30</td><td>DPCC<br>1ro A</td><td class="empty"></td><td>Cc.Ss<br>2do D</td><td class="empty"></td><td class="empty"></td></tr>
+      <tr>
+        <td>14:30 – 15:10</td>
+        <td class="empty"></td>
+        <td>DPCC<br>1ro A</td>
+        <td>DPCC<br>1ro B</td>
+        <td class="empty"></td>
+        <td class="empty"></td>
+      </tr>
+      <tr>
+        <td>15:10 – 15:50</td>
+        <td class="empty"></td>
+        <td class="empty"></td>
+        <td>Cc.Ss<br>2do D</td>
+        <td class="empty"></td>
+        <td class="empty"></td>
+      </tr>
+      <tr>
+        <td>15:50 – 16:30</td>
+        <td>DPCC<br>1ro A</td>
+        <td class="empty"></td>
+        <td>Cc.Ss<br>2do D</td>
+        <td class="empty"></td>
+        <td class="empty"></td>
+      </tr>
 
-      <tr class="receso"><td>16:30 – 16:40</td><td colspan="5">-- Pausa de receso --</td></tr>
+      <tr class="receso">
+        <td>16:30 – 16:40</td>
+        <td colspan="5">-- Pausa de receso --</td>
+      </tr>
 
-      <tr><td>16:40 – 17:20</td><td>DPCC<br>1ro A</td><td class="empty"></td><td>Educ. Fis.<br>5to C</td><td class="empty"></td><td class="empty"></td></tr>
-      <tr><td>17:20 – 18:00</td><td>DPCC<br>1ro B</td><td class="empty"></td><td>Educ. Fis.<br>5to C</td><td class="empty"></td><td class="empty"></td></tr>
-      <tr><td>18:00 – 18:40</td><td>DPCC<br>1ro B</td><td class="empty"></td><td>Educ. Fis.<br>5to C</td><td class="empty"></td><td class="empty"></td></tr>
+      <tr>
+        <td>16:40 – 17:20</td>
+        <td>DPCC<br>1ro A</td>
+        <td class="empty"></td>
+        <td>Educ. Fis.<br>5to C</td>
+        <td class="empty"></td>
+        <td class="empty"></td>
+      </tr>
+      <tr>
+        <td>17:20 – 18:00</td>
+        <td>DPCC<br>1ro B</td>
+        <td class="empty"></td>
+        <td>Educ. Fis.<br>5to C</td>
+        <td class="empty"></td>
+        <td class="empty"></td>
+      </tr>
+      <tr>
+        <td>18:00 – 18:40</td>
+        <td>DPCC<br>1ro B</td>
+        <td class="empty"></td>
+        <td>Educ. Fis.<br>5to C</td>
+        <td class="empty"></td>
+        <td class="empty"></td>
+      </tr>
     </tbody>
   </table>
 
   <a href="index.html" class="btn-back">← Volver al Inicio</a>
 
 </body>
+
 </html>
